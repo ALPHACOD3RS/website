@@ -1,0 +1,317 @@
+.neon{
+    display: flex;
+    
+    
+    
+    font-family: 'raleway',sans-serif;
+    font-weight: bold;
+}
+
+.neon{
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 20px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+
+
+    .neon:nth-child(2){
+        filter: hue-rotate(270deg);
+    }
+
+    .neon span{
+        position: absolute;
+        display: block;
+    }
+    .neon span:nth-child(1){
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: linear-gradient(90deg,transparent,#b003f4);
+        animation: animate1 1s linear infinite;
+    }
+    /* add keyframes for animation*/
+    @keyframes animate1{
+        0%{
+            left: -100%;
+        }
+        50%,100%{
+            left: 100%;
+        }
+    }
+    /* 2nd line animation*/
+    .neon span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 1px;
+        height: 10%;
+        background: linear-gradient(180deg,transparent,#b4f403);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    /* add keyframes*/                                                                                                             /*position: relativedisplay: inline-blockpadding: 30px 50px;margin: 90px 0;color: #03e9f4;text-decoration: none;text-transform: uppercase;transition: 0.5s;overflow: hidden;margin-right: 50px;*/
+    @keyframes animate2{
+        0%{
+            top: -100%;
+        }
+        50%,100%{
+            top: 100%;
+        }
+    }
+    /* 3rd line animation*/
+    
+    .neon span:nth-child(3){
+        bottom: 0;
+        right: 0;
+        width:100%;
+        height: 2px;
+        background: linear-gradient(290deg,transparent,#b7d410);
+        animation: animate3 1s linear infinite;
+    }
+    @keyframes animate3{
+        0%{
+            right: -100%;
+        }
+        50%,100%{
+            right: 100%;
+        }
+    }
+    /* 4th line animation*/
+    .neon span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+    
+          
+        background: linear-gradient(360deg,transparent,#03f453);
+        animation: animate4 1s linear infinite;
+        animation-delay:1s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom: -100%;
+        }
+        50%,100%{
+            bottom: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .neon {
+            padding: 10px 20px;
+            margin: 10px 0;
+        }
+    }
+
+    @font-face {
+        font-family: Clip;
+        src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+      }
+      
+      
+      
+      .sign {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+        background-image: radial-gradient(
+          ellipse 50% 35% at 50% 50%,
+          #18586b88,
+          transparent
+        );
+        transform: translate(-50%, -50%);
+        letter-spacing: 2;
+        left: 13%;
+        top: 50%;
+        font-family: "Clip";
+        text-transform: uppercase;
+        font-size: 1.2em;
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+          -0.2rem 0.1rem 1rem #65e0ff, 0.2rem 0.1rem 1rem #65d3ff,
+          0 -0.5rem 2rem #249cff, 0 0.5rem 3rem #24c1ff;
+        animation: shine 2s forwards, flicker 3s infinite;
+      }
+      
+      @keyframes blink {
+        0%,
+        22%,
+        36%,
+        75% {
+          color: #ffe6ff;
+          text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+          -0.2rem 0.1rem 1rem #65e0ff, 0.2rem 0.1rem 1rem #65d3ff,
+          0 -0.5rem 2rem #249cff, 0 0.5rem 3rem #24c1ff;
+        }
+        28%,
+        33% {
+          color: #65edffaf;
+          text-shadow: none;
+        }
+        82%,
+        97% {
+          color: #24ffff5e;
+          text-shadow: none;
+        }
+      }
+      
+      .flicker {
+        animation: shine 2s forwards, blink 3s 2s infinite;
+      }
+      
+      .fast-flicker {
+        animation: shine 2s forwards, blink 10s 1s infinite;
+      }
+      
+      @keyframes shine {
+        0% {
+          color: #6b1839;
+          text-shadow: none;
+        }
+        100% {
+          color: #ffe6ff;
+          text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+          -0.2rem 0.1rem 1rem #65e0ff, 0.2rem 0.1rem 1rem #65d3ff,
+          0 -0.5rem 2rem #249cff, 0 0.5rem 3rem #24c1ff;
+        }
+      }
+      
+      @keyframes flicker {
+        from {
+          opacity: 1;
+        }
+      
+        4% {
+          opacity: 0.9;
+        }
+      
+        6% {
+          opacity: 0.85;
+        }
+      
+        8% {
+          opacity: 0.95;
+        }
+      
+        10% {
+          opacity: 0.9;
+        }
+      
+        11% {
+          opacity: 0.922;
+        }
+      
+        12% {
+          opacity: 0.9;
+        }
+      
+        14% {
+          opacity: 0.95;
+        }
+      
+        16% {
+          opacity: 0.98;
+        }
+      
+        17% {
+          opacity: 0.9;
+        }
+      
+        19% {
+          opacity: 0.93;
+        }
+      
+        20% {
+          opacity: 0.99;
+        }
+      
+        24% {
+          opacity: 1;
+        }
+      
+        26% {
+          opacity: 0.94;
+        }
+      
+        28% {
+          opacity: 0.98;
+        }
+      
+        37% {
+          opacity: 0.93;
+        }
+      
+        38% {
+          opacity: 0.5;
+        }
+      
+        39% {
+          opacity: 0.96;
+        }
+      
+        42% {
+          opacity: 1;
+        }
+      
+        44% {
+          opacity: 0.97;
+        }
+      
+        46% {
+          opacity: 0.94;
+        }
+      
+        56% {
+          opacity: 0.9;
+        }
+      
+        58% {
+          opacity: 0.9;
+        }
+      
+        60% {
+          opacity: 0.99;
+        }
+      
+        68% {
+          opacity: 1;
+        }
+      
+        70% {
+          opacity: 0.9;
+        }
+      
+        72% {
+          opacity: 0.95;
+        }
+      
+        93% {
+          opacity: 0.93;
+        }
+      
+        95% {
+          opacity: 0.95;
+        }
+      
+        97% {
+          opacity: 0.93;
+        }
+      
+        to {
+          opacity: 1;
+        }
+      }
+      
+      
