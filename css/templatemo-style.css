@@ -128,7 +128,7 @@ figure {
 .opacity-no {
   opacity: 1 !important;
 }
-
+/*
 video {
   position: fixed;
   right: 0;
@@ -136,6 +136,7 @@ video {
   min-width: 100%; 
   min-height: 100%;
 }
+*/
 #video:after {
   content: '';
   opacity: 0.75;
